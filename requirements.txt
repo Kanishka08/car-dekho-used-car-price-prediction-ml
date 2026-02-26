@@ -7,3 +7,6 @@ pyyaml
 joblib
 matplotlib
 seaborn
+plotly
+
+-e .

@@ -19,11 +19,11 @@ def get_requirements(file_path:str)->List[str]:
 
 
 setup(
-name='mlproject',
-version='0.0.1',
-author='Kanishka',
-author_email='kanishkachoudhury08@gmail.com',
-packages=find_packages(),
-install_requires=get_requirements('requirements.txt')
-
+    name='carprice',
+    version='0.0.1',
+    author='Kanishka',
+    author_email='kanishkachoudhury08@gmail.com',
+    packages=find_packages(where="src"),
+    package_dir={"": "src"},
+    install_requires=get_requirements('requirements.txt')
 )
