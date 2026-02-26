@@ -9,7 +9,8 @@ from carprice.exception import CustomException
 
 @dataclass
 class DataIngestionConfig:
-    raw_data_path: str
+    source_data_path: str = "notebook/data/cardekho_dataset.csv"
+    raw_data_path: str = "artifacts/data/raw.csv"
 
 
 class DataIngestion:

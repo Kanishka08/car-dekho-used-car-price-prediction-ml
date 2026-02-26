@@ -1,6 +1,7 @@
-from carprice.components.data_ingestion import (
-    DataIngestion,
-    DataIngestionConfig
+from carprice.components.data_ingestion import DataIngestion, DataIngestionConfig
+from carprice.components.data_transformation import (
+    DataTransformation,
+    DataTransformationConfig
 )
 from carprice.logger import logger
 
@@ -8,15 +9,17 @@ from carprice.logger import logger
 def run_training_pipeline():
     logger.info("Training pipeline started")
 
-    ingestion_config = DataIngestionConfig(
-        raw_data_path="artifacts/data/raw.csv"
-    )
-
-    ingestion = DataIngestion(ingestion_config)
+    ingestion = DataIngestion(DataIngestionConfig())
     raw_data_path = ingestion.initiate_data_ingestion()
 
-    logger.info("Training pipeline finished ingestion step")
-    return raw_data_path
+    transformation = DataTransformation(DataTransformationConfig())
+    X_train, X_test, y_train, y_test = transformation.initiate_data_transformation(
+        raw_data_path
+    )
+
+    logger.info("Training pipeline completed transformation step")
+
+    return X_train, X_test, y_train, y_test
 
 
 if __name__ == "__main__":
