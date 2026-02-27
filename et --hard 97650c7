@@ -1,0 +1,18 @@
+[33m7d0c32e[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Update requirements.txt
+[33maa4d085[m Create pyproject.toml
+[33m505f6bf[m Update app.py
+[33m59d1906[m Update app.py
+[33m0746e53[m Update requirements.txt
+[33mf8c3c87[m Update requirements.txt
+[33m287f8da[m Create runtime.txt
+[33m4e9b7cc[m Update requirements.txt
+[33m97650c7[m prediction plus app
+[33m190b2da[m Update .gitignore
+[33m4d8a286[m Model Trainer
+[33md8e933d[m Data Transformation
+[33m4bad592[m Data Ingestion
+[33m10188d7[m EDA and Problem Statement
+[33m861c88f[m logging and exception
+[33m4e398dc[m setup
+[33m7a6a31c[m Create .gitignore
+[33m15d0ce0[m first commit
